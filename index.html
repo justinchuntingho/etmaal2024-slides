@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Image and Text Analysis using Multi-modal Embeddings</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/scipo.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="withbg">
+					<h4>ETMAAL 2024</h4>
+					<h3>Image and Text Analysis using <br>Multi-modal Embeddings</h3>
+					<h4 style ="color:#333">Justin Chun-ting Ho</h4>
+					<small>Amsterdam School of Communication Research<br>
+					(in collaboration with Marthe Möller, Joanna Strycharz, and Rhianne Hoek)</small>
+					<p><img src="uvalogo.png" width="32%" style="background:none; border:none; box-shadow:none;">
+						<img src="ascorlogo.png" width="40%" style="background:none; border:none; box-shadow:none;"></p>
+				</div>
+				</section>
+				<section>
+					Automatic analysis of image, audio, and video content for a long time seemed nigh impossible. <br> ---- <a href="https://doi.org/10.1080/19312458.2023.2261372">Kroon et al. (2023)</a>
+				</section>
+				<section>
+					<h3>Pixels</h3>
+					<img src="https://www.ultimate-photo-tips.com/image-files/pixels.jpg" width="80%" style="background:none; border:none; box-shadow:none;"><br>
+					<small>Credit: Julie Waterhouse Photography; Ultimate-Photo-Tips.com</small>
+				</section>
+				<section data-background-image="https://storage.googleapis.com/gweb-cloudblog-publish/images/cloud-vision-26x0g.max-700x700.PNG" data-background-size="contain">
+				<div style="background-color:rgba(255,255,255,0.7)">
+					<h2>2016: Google Cloud Vision</h2>
+				</div>
+				</section>
+				<section data-background-image="https://cs.stanford.edu/people/karpathy/cnnembed/cnn_embed_1k.jpg">
+				<div style="background-color:rgba(255,255,255,0.7)">
+					<h2>ImageNet</h2>
+				</div>
+				</section>
+				<section>
+					<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*tz_yyNvvna59tYDoqD4CUg.png" width="80%" style="background:none; border:none; box-shadow:none;"><br>
+					<small><a href="https://doi.org/10.48550/arXiv.2103.00020">(Radford et al, 2021)</a></small>
+				</section>
+				<section>
+					<h2>Is it useful?</h2>
+				</section>
+				<section>
+					<h2>When is it (not) useful?</h2>
+				</section>
+				<section>
+						<h2>Data</h2>
+						<ul>
+							<li>Instagram posts of 44 Dutch green influencer</li>
+							<li>283 posts, 794 images (with caption)</li>
+							<li>Coded manually for the themes</li>
+						</ul>
+					</section>
+				<section>
+					<section>
+						<h3>Three approaches</h3>
+						<ol>
+							<li>Multimodal</li>
+							<li>Image only</li>
+							<li>Text-based</li>
+						</ol>
+					</section>
+					<section>
+						<h4>Image only Approach</h4>
+						<img src="img.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+					</section>
+					<section>
+						<h4>Multimodal Approach</h4>
+						<img src="multimodal.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+					</section>
+					<section>
+						<h4>Text-based Approach</h4>
+						<img src="text.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+					</section>
+					<section>
+						<h4>Themes</h4>
+						<img src="theme_count.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+					</section>
+					<section data-background-size="100%" data-background-iframe="multimodal.html">
+					</section>
+				</section>
+				<section>
+					<h4>Coverage</h4>
+					<img src="coverage.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h4>Correct Classification Rate</h4>
+					<img src="overall.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+				<section>
+					<h4>Correct Classification Rate by Topic</h4>
+					<img src="accbytopic.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h4>Alignment between texts and images</h4>
+					<img src="cossim.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<img src="lm.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				</section>
+
+					<section>
+						<h2>Thank You!</h2>
+						<h4>Twitter: @justin_ct_ho<br>Github: justinchuntingho<br>Email: j.c.ho@uva.nl</h4>
+					</section>
+				</div>
+			</div>
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				});
+			</script>
+		</body>
+		</html>
